@@ -1,0 +1,23 @@
+---
+import EmbedContainer from "./EmbedContainer.astro";
+import TT1 from "../embedded-content/Tiktok/1.astro";
+import TT2 from "../embedded-content/Tiktok/2.astro";
+---
+
+<div class="my-8">
+ <h3 class="font-medium text-xl mb-4">Estadísticas de Tiktok</h3>
+ <div class="flex gap-4 my-8">
+  <span><strong>Seguidores: </strong>14.9k</span>
+  <!-- <span><strong>Vistas: </strong>14.9k</span> -->
+  <span><strong>Likes: </strong>407.9k</span>
+ </div>
+ <h3>Videos virales</h3>
+ <div class="flex justify-between my-8">
+  <EmbedContainer>
+   <TT1 style="height: 700px; width: 326px" />
+  </EmbedContainer>
+  <EmbedContainer>
+   <TT2 style="height: 700px; width: 326px" />
+  </EmbedContainer>
+ </div>
+</div>

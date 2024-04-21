@@ -1,0 +1,24 @@
+---
+import EmbedContainer from "./EmbedContainer.astro";
+import IG1 from "../embedded-content/IG/1.astro";
+import IG2 from "../embedded-content/IG/2.astro";
+import IG3 from "../embedded-content/IG/3.astro";
+---
+
+<div class="my-8">
+ <h3 class="font-medium text-xl mb-4">Estadísticas de Instagram</h3>
+ <div class="flex gap-4 my-8">
+  <span><strong>Seguidores: </strong>16.7k</span>
+  <span><strong>Alcance: </strong>117.9k</span>
+  <!-- <span><strong>Likes: </strong>14.9k</span> -->
+ </div>
+ <h3>Videos virales</h3>
+ <div class="flex justify-between my-8">
+  <EmbedContainer>
+   <IG1 style="height: 600px" />
+  </EmbedContainer>
+  <EmbedContainer>
+   <IG3 style="height: 600px" />
+  </EmbedContainer>
+ </div>
+</div>

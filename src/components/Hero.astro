@@ -1,0 +1,42 @@
+---
+const personalImageAlt = "Julián Tibana";
+import Badge from "../components/Badge.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import IG from "./icons/IG.astro";
+import Tiktok from "./icons/Tiktok.astro";
+---
+
+<div class="max-w-xl">
+ <div class="flex gap-4 mb-4">
+  <img
+   class="rounded-full shadow-lg size-16 object-cover"
+   src="/me.jpg"
+   alt={personalImageAlt}
+  />
+   <Badge>¡Creemos tu próximo video juntos!</Badge>
+ </div>
+ <h1 class="text-4xl font-bold tracking-tight text-gray-700 sm:text-5xl">¡Hola! Soy Julián Tibana</h1>
+ <p
+  class="mt-6 text-xl text-gray-500 text-pretty [&>strong]:text-[var(--accent)] [&>strong]:font-semibold"
+ >
+  Creando contenido desde 2019.
+  <strong>He creado contenido para marcas con presencia en Medellín como Domino's Pizza, Gobernación de Antioquia, Centro Comercial Arkadia,</strong> y muchas más.
+ </p>
+ <nav class="flex flex-wrap gap-4 mt-8">
+  <SocialPill
+   href="https://www.instagram.com/julian.tibana?igsh=MWt3OGVwNnByZXFpbQ%3D%3D&utm_source=qr"
+  >
+   <IG class="size-4" />
+   Instagram
+  </SocialPill>
+  <SocialPill href="https://www.tiktok.com/@julian.tibana?_t=8lT68nu507R&_r=1">
+   <Tiktok class="size-4" />
+   Tiktok
+  </SocialPill>
+  <SocialPill href="mailto:tastebudsmed@gmail.com">
+   <MailIcon class="size-4" />
+   Contáctame
+  </SocialPill>
+ </nav>
+</div>

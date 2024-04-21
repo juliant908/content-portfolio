@@ -1,0 +1,68 @@
+---
+import "@fontsource-variable/league-spartan";
+import "@fontsource/ubuntu/300.css";
+import "@fontsource/ubuntu/400.css";
+import "@fontsource/ubuntu/500.css";
+import "@fontsource/ubuntu/700.css";
+
+interface Props {
+	title: string;
+}
+
+const {title} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-100">
+		</div>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: #df1717;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+		--ubuntu: "Ubuntu", sans-serif;
+		--league-spartan: "League Spartan Variable", sans-serif;
+	}
+	html {
+		font-family: var(--ubuntu), system-ui, sans-serif;
+		background-color: rgb(243 244 246);
+		background-size: 224px;
+	}
+
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+
+	h1,h2,h3,h4,h5,h6	{
+		font-family: var(--league-spartan), sans-serif;
+		color: var(--accent);
+	}
+
+</style>

@@ -1,0 +1,46 @@
+---
+import SectionContainer from "../components/SectionContainer.astro";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Stats from "../components/Stats.astro";
+import Loader from "../components/Loader.astro";
+---
+
+<Layout
+	title="Julián Tibana | Creador de contenido gastronómico en la ciudad de Medellín, Antioquia."
+>
+	<main class="px-4 relative">
+		<SectionContainer class="py-16 md:py-36">
+			<Hero />
+		</SectionContainer>
+		<SectionContainer>
+			<h2
+				class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-[var(--accent)]"
+			>
+				Estadísticas generales
+			</h2>
+			<Stats	/>
+		</SectionContainer>
+		<Loader />
+	</main>
+</Layout>
+
+<style>
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		color: black;
+	}
+
+</style>
+
+<script>
+	window.addEventListener('load', () => {
+		const loader = document.querySelector('.loader') as HTMLElement;
+		setTimeout(() => {
+			loader.style.display = 'none';
+		}, 100);
+	});
+</script>
